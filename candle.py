@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1cABpTkS4xfhseWIqja8E8z9cOFz89sA0
 """
 
-pip install websocket-client
+#pip install websocket-client
 
 import websocket, json
 from datetime import datetime
@@ -17,16 +17,6 @@ interval = '1m'
 
 
 socket = f'wss://stream.binance.com:9443/ws/{cc}t@kline_{interval}'
-
-def on_message(ws, message):
-    print(message)
-
-def on_close(ws, close_status_code, close_msg):
-    print("Connection closed")
-
-ws = websocket.WebSocketApp(socket,on_message=on_message,on_close=on_close)
-
-ws.run_forever()
 
 dates, closes, highs, lows = [], [], [], []
 
