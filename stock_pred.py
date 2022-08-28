@@ -54,6 +54,8 @@ scaled_data = scaler.fit_transform(final_dataset)
 
 x_train_data, y_train_data = [], []
 
+print( scaled_data)
+print(len(train_data))
 for i in range(60, len(train_data)):
     x_train_data.append(scaled_data[i-60:i, 0])
     y_train_data.append(scaled_data[i, 0])
