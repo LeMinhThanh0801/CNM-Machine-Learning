@@ -16,6 +16,7 @@ scaler = MinMaxScaler(feature_range=(0, 1))
 df = pd.read_csv("NSE-TATAResult.csv")
 df.head()
 
+print(df)
 df["Date"] = pd.to_datetime(df.Date, format="%Y-%m-%d")
 df.index = df['Date']
 
